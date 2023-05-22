@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KorisnikStartScreenController">
+ <fx:include source="menu-korisnik.fxml" GridPane.columnSpan="2" GridPane.valignment="TOP" />
+   <TableView fx:id="popravakTableView" prefHeight="325.0" prefWidth="720.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+     <columns>
+       <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+       <TableColumn fx:id="type" prefWidth="225.59996032714844" text="Type of repair" />
+         <TableColumn fx:id="price" prefWidth="217.60003662109375" text="Price" />
+         <TableColumn fx:id="duration" prefWidth="203.20001220703125" text="Duration" />
+     </columns>
+      <GridPane.margin>
+         <Insets left="40.0" right="40.0" />
+      </GridPane.margin>
+   </TableView>
+   <Label />
+   <Label fx:id="welcome" text="Welcome" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+   <Label fx:id="orderNumb" text="Order numb :" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+      <GridPane.margin>
+         <Insets bottom="20.0" />
+      </GridPane.margin></Label>
+   <Button styleClass="customerButtons" mnemonicParsing="false" onAction="#sortByPrice" text="Sort by price" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+   <Button styleClass="customerButtons" mnemonicParsing="false" onAction="#sortByType" text="Sort by type" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.20001220703125" minWidth="10.0" prefWidth="402.20001220703125" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.79998779296875" minWidth="10.0" prefWidth="397.79998779296875" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="238.79999389648438" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="433.4" minHeight="10.0" prefHeight="303.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="183.79995117187502" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
